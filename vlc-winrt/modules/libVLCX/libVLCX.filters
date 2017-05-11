@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>c8448b46-3fb0-40e4-910e-da2bb5d93b70</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="MMDeviceLocator.cpp" />
+    <ClCompile Include="DirectXManger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="MMDeviceLocator.h" />
+    <ClInclude Include="DirectXManger.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\libvlc\libvlc.dll">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="..\..\libvlc\libvlccore.dll">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+</Project>

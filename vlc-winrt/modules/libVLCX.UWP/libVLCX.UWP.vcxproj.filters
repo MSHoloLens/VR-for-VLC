@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>4d673108-a06d-490f-9565-7faba5bf678f</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="libvlcpp">
+      <UniqueIdentifier>{e8e74e09-b896-4519-9fb9-1c29a35b1810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libvlcppcx">
+      <UniqueIdentifier>{553d4421-fe5f-48d3-9baf-917f636a5db0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="..\libVLCX\DirectXManager.cpp" />
+    <ClCompile Include="..\libVLCX\MMDeviceLocator.cpp" />
+    <ClCompile Include="..\libVLCX\Thumbnailer.cpp" />
+    <ClCompile Include="..\libvlcppcx\DialogCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\EqualizerCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\EventManagerCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\InstanceCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\MediaCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\MediaDiscovererCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\MediaListCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\MediaPlayerCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\StructuresCX.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libvlcppcx\PlatformHelpers.cpp">
+      <Filter>libvlcppcx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="..\libvlcpp\vlcpp\vlc.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\common.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\Dialog.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\Equalizer.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\EventManager.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\Instance.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\Internal.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\Media.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\MediaDiscoverer.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\MediaLibrary.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\MediaList.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\MediaListPlayer.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\MediaPlayer.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcpp\vlcpp\structures.hpp">
+      <Filter>libvlcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libVLCX\DirectXManager.h" />
+    <ClInclude Include="..\libVLCX\MMDeviceLocator.h" />
+    <ClInclude Include="..\libVLCX\Thumbnailer.h" />
+    <ClInclude Include="..\libvlcppcx\DialogCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\EqualizerCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\EventManagerCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\InstanceCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\MediaCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\MediaDiscovererCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\MediaListCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\MediaPlayerCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\StructuresCX.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libvlcppcx\PlatformHelpers.hpp">
+      <Filter>libvlcppcx</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

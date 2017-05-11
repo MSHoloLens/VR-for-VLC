@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap mp uap3">
+  <Identity Name="906.VRforVLC" Publisher="CN=082E31C3-1BA9-489A-BBF5-2E1B00D0BCB1" Version="1.1.14.0" />
+  <mp:PhoneIdentity PhoneProductId="25395555-a765-4d57-b8c3-50f1e9f33b86" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>VR for VLC</DisplayName>
+    <PublisherDisplayName>李文祥</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Holographic" MinVersion="10.0.14393.0" MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="VLC.App">
+      <uap:VisualElements DisplayName="VR for VLC" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="VR for VLC, base VLC open source prioject  http://mshololens.cn" BackgroundColor="#333333">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="VR for VLC" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="black" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="vr4vlc">
+            <uap:DisplayName>VR for VLC</uap:DisplayName>
+            <uap:SupportedFileTypes>
+              <uap:FileType>.3g2</uap:FileType>
+              <uap:FileType>.3gp</uap:FileType>
+              <uap:FileType>.3gp2</uap:FileType>
+              <uap:FileType>.3gpp</uap:FileType>
+              <uap:FileType>.amv</uap:FileType>
+              <uap:FileType>.asf</uap:FileType>
+              <uap:FileType>.avi</uap:FileType>
+              <uap:FileType>.divx</uap:FileType>
+              <uap:FileType>.drc</uap:FileType>
+              <uap:FileType>.dv</uap:FileType>
+              <uap:FileType>.f4v</uap:FileType>
+              <uap:FileType>.flv</uap:FileType>
+              <uap:FileType>.gvi</uap:FileType>
+              <uap:FileType>.gxf</uap:FileType>
+              <uap:FileType>.ismv</uap:FileType>
+              <uap:FileType>.m1v</uap:FileType>
+              <uap:FileType>.m2v</uap:FileType>
+              <uap:FileType>.m2t</uap:FileType>
+              <uap:FileType>.m2ts</uap:FileType>
+              <uap:FileType>.m4a</uap:FileType>
+              <uap:FileType>.mkv</uap:FileType>
+              <uap:FileType>.mov</uap:FileType>
+              <uap:FileType>.mp2</uap:FileType>
+              <uap:FileType>.mp2v</uap:FileType>
+              <uap:FileType>.mp4</uap:FileType>
+              <uap:FileType>.m4v</uap:FileType>
+              <uap:FileType>.mp4v</uap:FileType>
+              <uap:FileType>.mpe</uap:FileType>
+              <uap:FileType>.mpeg</uap:FileType>
+              <uap:FileType>.mpeg1</uap:FileType>
+              <uap:FileType>.mpeg2</uap:FileType>
+              <uap:FileType>.mpeg4</uap:FileType>
+              <uap:FileType>.mpg</uap:FileType>
+              <uap:FileType>.mpv2</uap:FileType>
+              <uap:FileType>.mts</uap:FileType>
+              <uap:FileType>.mtv</uap:FileType>
+              <uap:FileType>.mxf</uap:FileType>
+              <uap:FileType>.mxg</uap:FileType>
+              <uap:FileType>.nsv</uap:FileType>
+              <uap:FileType>.nut</uap:FileType>
+              <uap:FileType>.nuv</uap:FileType>
+              <uap:FileType>.ogm</uap:FileType>
+              <uap:FileType>.ogv</uap:FileType>
+              <uap:FileType>.ogx</uap:FileType>
+              <uap:FileType>.ps</uap:FileType>
+              <uap:FileType>.rec</uap:FileType>
+              <uap:FileType>.rm</uap:FileType>
+              <uap:FileType>.rmvb</uap:FileType>
+              <uap:FileType>.tob</uap:FileType>
+              <uap:FileType>.ts</uap:FileType>
+              <uap:FileType>.tts</uap:FileType>
+              <uap:FileType>.vro</uap:FileType>
+              <uap:FileType>.webm</uap:FileType>
+              <uap:FileType>.wm</uap:FileType>
+              <uap:FileType>.wmv</uap:FileType>
+              <uap:FileType>.wtv</uap:FileType>
+              <uap:FileType>.xesc</uap:FileType>
+              <uap:FileType>.mp3</uap:FileType>
+              <uap:FileType>.ogg</uap:FileType>
+              <uap:FileType>.aac</uap:FileType>
+              <uap:FileType>.wma</uap:FileType>
+              <uap:FileType>.wav</uap:FileType>
+              <uap:FileType>.flac</uap:FileType>
+              <uap:FileType>.mlp</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="vr4vlc" DesiredView="useMore">
+            <uap:DisplayName>VR for VLC</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="internetClientServer" />
+    <uap:Capability Name="musicLibrary" />
+    <uap:Capability Name="videosLibrary" />
+    <uap:Capability Name="removableStorage" />
+    <uap:Capability Name="picturesLibrary" />
+    <uap3:Capability Name="backgroundMediaPlayback" />
+  </Capabilities>
+</Package>

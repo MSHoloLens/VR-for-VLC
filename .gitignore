@@ -41,3 +41,4 @@ build/VLC_WINRT.sln.DotSettings
 VR4VLC.VC.db
 
 project.lock.json
+/vlc-winrt/libvlc/Universal

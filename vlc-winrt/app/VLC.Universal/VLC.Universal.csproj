@@ -1,0 +1,1543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7B5C5B10-85F4-491A-94FA-755D253FF609}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VLC.Universal</RootNamespace>
+    <AssemblyName>VR for VLC.Universal</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>VLC.Universal_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Auto</AppxBundle>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>329FB2E8FFA3455F4AD84DEF3E33EC85B43B93A7</PackageCertificateThumbprint>
+    <AppxPackageDir>D:\dev\vlc\vr4vlc\AppPackages\</AppxPackageDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;TWO_PROCESS_BGA</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;TWO_PROCESS_BGA</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;STARTS;CODE_ANALYSIS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en-US</MultilingualFallbackLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+    <None Include="VLC.Universal_StoreKey.pfx" />
+    <None Include="VLC.Universal_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\MainPages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainPageFileExplorer.xaml.cs">
+      <DependentUpon>MainPageFileExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainPageMusic.xaml.cs">
+      <DependentUpon>MainPageMusic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainPageNetwork.xaml.cs">
+      <DependentUpon>MainPageNetwork.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainPageVideos.xaml.cs">
+      <DependentUpon>MainPageVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainPageXBOX.xaml.cs">
+      <DependentUpon>MainPageXBOX.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainVideoControls\AllVideosPivotItem.xaml.cs">
+      <DependentUpon>AllVideosPivotItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainVideoControls\CameraRollPivotItem.xaml.cs">
+      <DependentUpon>CameraRollPivotItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MainVideoControls\ShowsPivotItem.xaml.cs">
+      <DependentUpon>ShowsPivotItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MusicPanes\AlbumCollectionBase.xaml.cs">
+      <DependentUpon>AlbumCollectionBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MusicPanes\ArtistCollectionBase.xaml.cs">
+      <DependentUpon>ArtistCollectionBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MusicPanes\MusicPanesControls\AlbumsCollectionButtons.xaml.cs">
+      <DependentUpon>AlbumsCollectionButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MusicPanes\PlaylistCollectionBase.xaml.cs">
+      <DependentUpon>PlaylistCollectionBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\MusicPanes\SongCollectionBase.xaml.cs">
+      <DependentUpon>SongCollectionBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\AlbumPageControls\AlbumPageBase.xaml.cs">
+      <DependentUpon>AlbumPageBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\AlbumPageControls\MainAlbumHeader.xaml.cs">
+      <DependentUpon>MainAlbumHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\ArtistPageControls\ArtistAlbumsSemanticView.xaml.cs">
+      <DependentUpon>ArtistAlbumsSemanticView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\ArtistPageControls\ArtistInfoControl.xaml.cs">
+      <DependentUpon>ArtistInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\ArtistPageControls\MainArtistHeader.xaml.cs">
+      <DependentUpon>MainArtistHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\CreateNewPlaylist.xaml.cs">
+      <DependentUpon>CreateNewPlaylist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\MiniPlayerWindow.xaml.cs">
+      <DependentUpon>MiniPlayerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\MusicPlayerPage.xaml.cs">
+      <DependentUpon>MusicPlayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\MusicPlaylistPage.xaml.cs">
+      <DependentUpon>MusicPlaylistPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\PlaylistControls\AddAlbumToPlaylistBase.xaml.cs">
+      <DependentUpon>AddAlbumToPlaylistBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\PlaylistPage.xaml.cs">
+      <DependentUpon>PlaylistPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicPages\TagEditorPages\TrackEditorPage.xaml.cs">
+      <DependentUpon>TrackEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsPages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AlbumControl.xaml.cs">
+      <DependentUpon>AlbumControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\AlbumWithTracksResponsiveTemplate.xaml.cs">
+      <DependentUpon>AlbumWithTracksResponsiveTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ArtistHorizontalTemplate.xaml.cs">
+      <DependentUpon>ArtistHorizontalTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\BackDrop.cs" />
+    <Compile Include="Views\UserControls\BufferingControl.xaml.cs">
+      <DependentUpon>BufferingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\CommandBarBottom.xaml.cs">
+      <DependentUpon>CommandBarBottom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Flyouts\AlbumMenuFlyout.xaml.cs">
+      <DependentUpon>AlbumMenuFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IVLCModalFlyout.cs" />
+    <Compile Include="Views\UserControls\Flyouts\FileExplorerItemFlyout.xaml.cs">
+      <DependentUpon>FileExplorerItemFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Flyouts\TrackItemFlyout.xaml.cs">
+      <DependentUpon>TrackItemFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Flyouts\VideoInformationFlyout.xaml.cs">
+      <DependentUpon>VideoInformationFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\FocusTextBox.xaml.cs">
+      <DependentUpon>FocusTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\FolderDataTemplate.xaml.cs">
+      <DependentUpon>FolderDataTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\MusicControls\Equalizer.xaml.cs">
+      <DependentUpon>Equalizer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\PlayPauseButton.xaml.cs">
+      <DependentUpon>PlayPauseButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\PivotHeaderControl.xaml.cs">
+      <DependentUpon>PivotHeaderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\FakeAlbumControl.xaml.cs">
+      <DependentUpon>FakeAlbumControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\FakeVideoControl.xaml.cs">
+      <DependentUpon>FakeVideoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoCameraVideos.xaml.cs">
+      <DependentUpon>NoCameraVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoFavoriteAlbumsControl.xaml.cs">
+      <DependentUpon>NoFavoriteAlbumsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoMusicShowsPlaceholder.xaml.cs">
+      <DependentUpon>NoMusicShowsPlaceholder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoPlaylistPlaceholder.xaml.cs">
+      <DependentUpon>NoPlaylistPlaceholder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoResults.xaml.cs">
+      <DependentUpon>NoResults.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoShowPlaceholder.xaml.cs">
+      <DependentUpon>NoShowPlaceholder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NothingToSeeHere.xaml.cs">
+      <DependentUpon>NothingToSeeHere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoVideosControl.xaml.cs">
+      <DependentUpon>NoVideosControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\NoVideosPlaceholder.xaml.cs">
+      <DependentUpon>NoVideosPlaceholder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Placeholders\StartSearchingSomething.xaml.cs">
+      <DependentUpon>StartSearchingSomething.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Shell\BlankPage.xaml.cs">
+      <DependentUpon>BlankPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Shell\HomePageController.xaml.cs">
+      <DependentUpon>HomePageController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Shell\DesktopHomePageController.xaml.cs">
+      <DependentUpon>DesktopHomePageController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Shell\VLCDialog.xaml.cs">
+      <DependentUpon>VLCDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ShowItem.xaml.cs">
+      <DependentUpon>ShowItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\SliderControl.xaml.cs">
+      <DependentUpon>SliderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\SliderControlHorizontal.xaml.cs">
+      <DependentUpon>SliderControlHorizontal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\TrackItemTemplate.xaml.cs">
+      <DependentUpon>TrackItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\TrackItemTemplateDetailed.xaml.cs">
+      <DependentUpon>TrackItemTemplateDetailed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\TrackItemTemplateDetailedVertical.xaml.cs">
+      <DependentUpon>TrackItemTemplateDetailedVertical.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\VideoItem.xaml.cs">
+      <DependentUpon>VideoItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\VLCLogoWithGradient.xaml.cs">
+      <DependentUpon>VLCLogoWithGradient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VariousPages\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VariousPages\ExternalStorageIncludePage.xaml.cs">
+      <DependentUpon>ExternalStorageIncludePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VariousPages\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPages\TVShowsViews\ShowEpisodesView.xaml.cs">
+      <DependentUpon>ShowEpisodesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPages\VideoNowPlayingControls\AudioTracksSettings.xaml.cs">
+      <DependentUpon>AudioTracksSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPages\VideoNowPlayingControls\ChaptersSettings.xaml.cs">
+      <DependentUpon>ChaptersSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPages\VideoNowPlayingControls\SubtitlesSettings.xaml.cs">
+      <DependentUpon>SubtitlesSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPages\VideoNowPlayingControls\VideoPlayerOptionsPanel.xaml.cs">
+      <DependentUpon>VideoPlayerOptionsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPages\VideoPlayerPage.xaml.cs">
+      <DependentUpon>VideoPlayerPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\libvlc.dll">
+      <Link>libvlc.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\libvlccore.dll">
+      <Link>libvlccore.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libaccess_concat_plugin.dll">
+      <Link>plugins\access\libaccess_concat_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libaccess_imem_plugin.dll">
+      <Link>plugins\access\libaccess_imem_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libaccess_mms_plugin.dll">
+      <Link>plugins\access\libaccess_mms_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libaccess_realrtsp_plugin.dll">
+      <Link>plugins\access\libaccess_realrtsp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libaccess_winrt_plugin.dll">
+      <Link>plugins\access\libaccess_winrt_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libattachment_plugin.dll">
+      <Link>plugins\access\libattachment_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libdsm_plugin.dll">
+      <Link>plugins\access\libdsm_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libfilesystem_plugin.dll">
+      <Link>plugins\access\libfilesystem_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libftp_plugin.dll">
+      <Link>plugins\access\libftp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libhttps_plugin.dll">
+      <Link>plugins\access\libhttps_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libhttp_plugin.dll">
+      <Link>plugins\access\libhttp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libidummy_plugin.dll">
+      <Link>plugins\access\libidummy_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libimem_plugin.dll">
+      <Link>plugins\access\libimem_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\liblive555_plugin.dll">
+      <Link>plugins\access\liblive555_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libnfs_plugin.dll">
+      <Link>plugins\access\libnfs_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\librtp_plugin.dll">
+      <Link>plugins\access\librtp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libsatip_plugin.dll">
+      <Link>plugins\access\libsatip_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libsdp_plugin.dll">
+      <Link>plugins\access\libsdp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libsftp_plugin.dll">
+      <Link>plugins\access\libsftp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libshm_plugin.dll">
+      <Link>plugins\access\libshm_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libtcp_plugin.dll">
+      <Link>plugins\access\libtcp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libtimecode_plugin.dll">
+      <Link>plugins\access\libtimecode_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libudp_plugin.dll">
+      <Link>plugins\access\libudp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\access\libvdr_plugin.dll">
+      <Link>plugins\access\libvdr_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libaudiobargraph_a_plugin.dll">
+      <Link>plugins\audio_filter\libaudiobargraph_a_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libaudio_format_plugin.dll">
+      <Link>plugins\audio_filter\libaudio_format_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libchorus_flanger_plugin.dll">
+      <Link>plugins\audio_filter\libchorus_flanger_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libcompressor_plugin.dll">
+      <Link>plugins\audio_filter\libcompressor_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libdolby_surround_decoder_plugin.dll">
+      <Link>plugins\audio_filter\libdolby_surround_decoder_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libequalizer_plugin.dll">
+      <Link>plugins\audio_filter\libequalizer_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libgain_plugin.dll">
+      <Link>plugins\audio_filter\libgain_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libheadphone_channel_mixer_plugin.dll">
+      <Link>plugins\audio_filter\libheadphone_channel_mixer_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libkaraoke_plugin.dll">
+      <Link>plugins\audio_filter\libkaraoke_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libmad_plugin.dll">
+      <Link>plugins\audio_filter\libmad_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libmono_plugin.dll">
+      <Link>plugins\audio_filter\libmono_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libnormvol_plugin.dll">
+      <Link>plugins\audio_filter\libnormvol_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libparam_eq_plugin.dll">
+      <Link>plugins\audio_filter\libparam_eq_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libremap_plugin.dll">
+      <Link>plugins\audio_filter\libremap_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libsamplerate_plugin.dll">
+      <Link>plugins\audio_filter\libsamplerate_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libscaletempo_plugin.dll">
+      <Link>plugins\audio_filter\libscaletempo_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libsimple_channel_mixer_plugin.dll">
+      <Link>plugins\audio_filter\libsimple_channel_mixer_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libspatializer_plugin.dll">
+      <Link>plugins\audio_filter\libspatializer_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libspeex_resampler_plugin.dll">
+      <Link>plugins\audio_filter\libspeex_resampler_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libstereo_widen_plugin.dll">
+      <Link>plugins\audio_filter\libstereo_widen_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libtospdif_plugin.dll">
+      <Link>plugins\audio_filter\libtospdif_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libtrivial_channel_mixer_plugin.dll">
+      <Link>plugins\audio_filter\libtrivial_channel_mixer_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_filter\libugly_resampler_plugin.dll">
+      <Link>plugins\audio_filter\libugly_resampler_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_mixer\libfloat_mixer_plugin.dll">
+      <Link>plugins\audio_mixer\libfloat_mixer_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_mixer\libinteger_mixer_plugin.dll">
+      <Link>plugins\audio_mixer\libinteger_mixer_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_output\libadummy_plugin.dll">
+      <Link>plugins\audio_output\libadummy_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_output\libafile_plugin.dll">
+      <Link>plugins\audio_output\libafile_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_output\libamem_plugin.dll">
+      <Link>plugins\audio_output\libamem_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_output\libwasapi_plugin.dll">
+      <Link>plugins\audio_output\libwasapi_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\audio_output\libwinstore_plugin.dll">
+      <Link>plugins\audio_output\libwinstore_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libadpcm_plugin.dll">
+      <Link>plugins\codec\libadpcm_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libaes3_plugin.dll">
+      <Link>plugins\codec\libaes3_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libaraw_plugin.dll">
+      <Link>plugins\codec\libaraw_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libaribsub_plugin.dll">
+      <Link>plugins\codec\libaribsub_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libavcodec_plugin.dll">
+      <Link>plugins\codec\libavcodec_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libcc_plugin.dll">
+      <Link>plugins\codec\libcc_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libcdg_plugin.dll">
+      <Link>plugins\codec\libcdg_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libcvdsub_plugin.dll">
+      <Link>plugins\codec\libcvdsub_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libd3d11va_plugin.dll">
+      <Link>plugins\codec\libd3d11va_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libdca_plugin.dll">
+      <Link>plugins\codec\libdca_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libddummy_plugin.dll">
+      <Link>plugins\codec\libddummy_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libdvbsub_plugin.dll">
+      <Link>plugins\codec\libdvbsub_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libflac_plugin.dll">
+      <Link>plugins\codec\libflac_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libfluidsynth_plugin.dll">
+      <Link>plugins\codec\libfluidsynth_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libg711_plugin.dll">
+      <Link>plugins\codec\libg711_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libjpeg_plugin.dll">
+      <Link>plugins\codec\libjpeg_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libkate_plugin.dll">
+      <Link>plugins\codec\libkate_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\liblibass_plugin.dll">
+      <Link>plugins\codec\liblibass_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\liblpcm_plugin.dll">
+      <Link>plugins\codec\liblpcm_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libmft_plugin.dll">
+      <Link>plugins\codec\libmft_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libmpg123_plugin.dll">
+      <Link>plugins\codec\libmpg123_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\liboggspots_plugin.dll">
+      <Link>plugins\codec\liboggspots_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libopus_plugin.dll">
+      <Link>plugins\codec\libopus_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libpng_plugin.dll">
+      <Link>plugins\codec\libpng_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\librawvideo_plugin.dll">
+      <Link>plugins\codec\librawvideo_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libscte18_plugin.dll">
+      <Link>plugins\codec\libscte18_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libscte27_plugin.dll">
+      <Link>plugins\codec\libscte27_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libspdif_plugin.dll">
+      <Link>plugins\codec\libspdif_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libspeex_plugin.dll">
+      <Link>plugins\codec\libspeex_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libspudec_plugin.dll">
+      <Link>plugins\codec\libspudec_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libstl_plugin.dll">
+      <Link>plugins\codec\libstl_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libsubsdec_plugin.dll">
+      <Link>plugins\codec\libsubsdec_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libttml_plugin.dll">
+      <Link>plugins\codec\libttml_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libsubstx3g_plugin.dll">
+      <Link>plugins\codec\libsubstx3g_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libsubsusf_plugin.dll">
+      <Link>plugins\codec\libsubsusf_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libsvcdsub_plugin.dll">
+      <Link>plugins\codec\libsvcdsub_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libtheora_plugin.dll">
+      <Link>plugins\codec\libtheora_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libuleaddvaudio_plugin.dll">
+      <Link>plugins\codec\libuleaddvaudio_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libvorbis_plugin.dll">
+      <Link>plugins\codec\libvorbis_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libvpx_plugin.dll">
+      <Link>plugins\codec\libvpx_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\codec\libzvbi_plugin.dll">
+      <Link>plugins\codec\libzvbi_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\control\libdummy_plugin.dll">
+      <Link>plugins\control\libdummy_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\control\libgestures_plugin.dll">
+      <Link>plugins\control\libgestures_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\control\libhotkeys_plugin.dll">
+      <Link>plugins\control\libhotkeys_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\control\libnetsync_plugin.dll">
+      <Link>plugins\control\libnetsync_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libadaptive_plugin.dll">
+      <Link>plugins\demux\libadaptive_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libaiff_plugin.dll">
+      <Link>plugins\demux\libaiff_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libasf_plugin.dll">
+      <Link>plugins\demux\libasf_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libau_plugin.dll">
+      <Link>plugins\demux\libau_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libavi_plugin.dll">
+      <Link>plugins\demux\libavi_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libcaf_plugin.dll">
+      <Link>plugins\demux\libcaf_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libdemuxdump_plugin.dll">
+      <Link>plugins\demux\libdemuxdump_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libdemux_cdg_plugin.dll">
+      <Link>plugins\demux\libdemux_cdg_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libdemux_stl_plugin.dll">
+      <Link>plugins\demux\libdemux_stl_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libdiracsys_plugin.dll">
+      <Link>plugins\demux\libdiracsys_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libes_plugin.dll">
+      <Link>plugins\demux\libes_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libflacsys_plugin.dll">
+      <Link>plugins\demux\libflacsys_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libgme_plugin.dll">
+      <Link>plugins\demux\libgme_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libh26x_plugin.dll">
+      <Link>plugins\demux\libh26x_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libimage_plugin.dll">
+      <Link>plugins\demux\libimage_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libmjpeg_plugin.dll">
+      <Link>plugins\demux\libmjpeg_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libmkv_plugin.dll">
+      <Link>plugins\demux\libmkv_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libmp4_plugin.dll">
+      <Link>plugins\demux\libmp4_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libmpc_plugin.dll">
+      <Link>plugins\demux\libmpc_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libmpgv_plugin.dll">
+      <Link>plugins\demux\libmpgv_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libnsc_plugin.dll">
+      <Link>plugins\demux\libnsc_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libnsv_plugin.dll">
+      <Link>plugins\demux\libnsv_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libnuv_plugin.dll">
+      <Link>plugins\demux\libnuv_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libogg_plugin.dll">
+      <Link>plugins\demux\libogg_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libplaylist_plugin.dll">
+      <Link>plugins\demux\libplaylist_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libps_plugin.dll">
+      <Link>plugins\demux\libps_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libpva_plugin.dll">
+      <Link>plugins\demux\libpva_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\librawaud_plugin.dll">
+      <Link>plugins\demux\librawaud_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\librawdv_plugin.dll">
+      <Link>plugins\demux\librawdv_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\librawvid_plugin.dll">
+      <Link>plugins\demux\librawvid_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libreal_plugin.dll">
+      <Link>plugins\demux\libreal_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libsid_plugin.dll">
+      <Link>plugins\demux\libsid_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libsmf_plugin.dll">
+      <Link>plugins\demux\libsmf_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libsubtitle_plugin.dll">
+      <Link>plugins\demux\libsubtitle_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libts_plugin.dll">
+      <Link>plugins\demux\libts_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libtta_plugin.dll">
+      <Link>plugins\demux\libtta_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libty_plugin.dll">
+      <Link>plugins\demux\libty_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libvc1_plugin.dll">
+      <Link>plugins\demux\libvc1_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libvobsub_plugin.dll">
+      <Link>plugins\demux\libvobsub_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libvoc_plugin.dll">
+      <Link>plugins\demux\libvoc_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libwav_plugin.dll">
+      <Link>plugins\demux\libwav_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\demux\libxa_plugin.dll">
+      <Link>plugins\demux\libxa_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\keystore\libfile_keystore_plugin.dll">
+      <Link>plugins\keystore\libfile_keystore_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\keystore\libmemory_keystore_plugin.dll">
+      <Link>plugins\keystore\libmemory_keystore_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\logger\libconsole_logger_plugin.dll">
+      <Link>plugins\logger\libconsole_logger_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\logger\libfile_logger_plugin.dll">
+      <Link>plugins\logger\libfile_logger_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\lua\liblua_plugin.dll">
+      <Link>plugins\lua\liblua_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\meta_engine\libfolder_plugin.dll">
+      <Link>plugins\meta_engine\libfolder_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\meta_engine\libtaglib_plugin.dll">
+      <Link>plugins\meta_engine\libtaglib_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libaddonsfsstorage_plugin.dll">
+      <Link>plugins\misc\libaddonsfsstorage_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libaddonsvorepository_plugin.dll">
+      <Link>plugins\misc\libaddonsvorepository_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libaudioscrobbler_plugin.dll">
+      <Link>plugins\misc\libaudioscrobbler_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libexport_plugin.dll">
+      <Link>plugins\misc\libexport_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libfingerprinter_plugin.dll">
+      <Link>plugins\misc\libfingerprinter_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libgnutls_plugin.dll">
+      <Link>plugins\misc\libgnutls_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\liblogger_plugin.dll">
+      <Link>plugins\misc\liblogger_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libstats_plugin.dll">
+      <Link>plugins\misc\libstats_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\misc\libxml_plugin.dll">
+      <Link>plugins\misc\libxml_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_a52_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_a52_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_copy_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_copy_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_dirac_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_dirac_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_dts_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_dts_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_flac_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_flac_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_h264_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_h264_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_hevc_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_hevc_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_mlp_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_mlp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_mpeg4audio_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_mpeg4audio_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_mpeg4video_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_mpeg4video_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_mpegaudio_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_mpegaudio_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_mpegvideo_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_mpegvideo_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\packetizer\libpacketizer_vc1_plugin.dll">
+      <Link>plugins\packetizer\libpacketizer_vc1_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\services_discovery\libmediadirs_plugin.dll">
+      <Link>plugins\services_discovery\libmediadirs_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\services_discovery\libmicrodns_plugin.dll">
+      <Link>plugins\services_discovery\libmicrodns_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\services_discovery\libpodcast_plugin.dll">
+      <Link>plugins\services_discovery\libpodcast_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\services_discovery\libsap_plugin.dll">
+      <Link>plugins\services_discovery\libsap_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\services_discovery\libupnp_plugin.dll">
+      <Link>plugins\services_discovery\libupnp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\spu\libaudiobargraph_v_plugin.dll">
+      <Link>plugins\spu\libaudiobargraph_v_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\spu\liblogo_plugin.dll">
+      <Link>plugins\spu\liblogo_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\spu\libmarq_plugin.dll">
+      <Link>plugins\spu\libmarq_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\spu\libmosaic_plugin.dll">
+      <Link>plugins\spu\libmosaic_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\spu\libremoteosd_plugin.dll">
+      <Link>plugins\spu\libremoteosd_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\spu\librss_plugin.dll">
+      <Link>plugins\spu\librss_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\spu\libsubsdelay_plugin.dll">
+      <Link>plugins\spu\libsubsdelay_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\stream_filter\libadf_plugin.dll">
+      <Link>plugins\stream_filter\libadf_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\stream_filter\libcache_block_plugin.dll">
+      <Link>plugins\stream_filter\libcache_block_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\stream_filter\libcache_read_plugin.dll">
+      <Link>plugins\stream_filter\libcache_read_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\stream_filter\libhds_plugin.dll">
+      <Link>plugins\stream_filter\libhds_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\stream_filter\libinflate_plugin.dll">
+      <Link>plugins\stream_filter\libinflate_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\stream_filter\librecord_plugin.dll">
+      <Link>plugins\stream_filter\librecord_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\text_renderer\libfreetype_plugin.dll">
+      <Link>plugins\text_renderer\libfreetype_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\text_renderer\libtdummy_plugin.dll">
+      <Link>plugins\text_renderer\libtdummy_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libchain_plugin.dll">
+      <Link>plugins\video_chroma\libchain_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libd3d11_surface_plugin.dll">
+      <Link>plugins\video_chroma\libd3d11_surface_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libgrey_yuv_plugin.dll">
+      <Link>plugins\video_chroma\libgrey_yuv_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_10_p010_plugin.dll">
+      <Link>plugins\video_chroma\libi420_10_p010_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_nv12_plugin.dll">
+      <Link>plugins\video_chroma\libi420_nv12_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_rgb_mmx_plugin.dll">
+      <Link>plugins\video_chroma\libi420_rgb_mmx_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_rgb_plugin.dll">
+      <Link>plugins\video_chroma\libi420_rgb_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_rgb_sse2_plugin.dll">
+      <Link>plugins\video_chroma\libi420_rgb_sse2_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_yuy2_mmx_plugin.dll">
+      <Link>plugins\video_chroma\libi420_yuy2_mmx_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_yuy2_plugin.dll">
+      <Link>plugins\video_chroma\libi420_yuy2_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi420_yuy2_sse2_plugin.dll">
+      <Link>plugins\video_chroma\libi420_yuy2_sse2_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi422_i420_plugin.dll">
+      <Link>plugins\video_chroma\libi422_i420_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi422_yuy2_mmx_plugin.dll">
+      <Link>plugins\video_chroma\libi422_yuy2_mmx_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi422_yuy2_plugin.dll">
+      <Link>plugins\video_chroma\libi422_yuy2_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libi422_yuy2_sse2_plugin.dll">
+      <Link>plugins\video_chroma\libi422_yuy2_sse2_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\librv32_plugin.dll">
+      <Link>plugins\video_chroma\librv32_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libswscale_plugin.dll">
+      <Link>plugins\video_chroma\libswscale_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libyuvp_plugin.dll">
+      <Link>plugins\video_chroma\libyuvp_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libyuy2_i420_plugin.dll">
+      <Link>plugins\video_chroma\libyuy2_i420_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_chroma\libyuy2_i422_plugin.dll">
+      <Link>plugins\video_chroma\libyuy2_i422_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libadjust_plugin.dll">
+      <Link>plugins\video_filter\libadjust_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libalphamask_plugin.dll">
+      <Link>plugins\video_filter\libalphamask_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libanaglyph_plugin.dll">
+      <Link>plugins\video_filter\libanaglyph_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libantiflicker_plugin.dll">
+      <Link>plugins\video_filter\libantiflicker_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libball_plugin.dll">
+      <Link>plugins\video_filter\libball_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libblendbench_plugin.dll">
+      <Link>plugins\video_filter\libblendbench_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libblend_plugin.dll">
+      <Link>plugins\video_filter\libblend_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libbluescreen_plugin.dll">
+      <Link>plugins\video_filter\libbluescreen_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libcanvas_plugin.dll">
+      <Link>plugins\video_filter\libcanvas_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libcolorthres_plugin.dll">
+      <Link>plugins\video_filter\libcolorthres_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libcroppadd_plugin.dll">
+      <Link>plugins\video_filter\libcroppadd_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libdeinterlace_plugin.dll">
+      <Link>plugins\video_filter\libdeinterlace_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libedgedetection_plugin.dll">
+      <Link>plugins\video_filter\libedgedetection_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\liberase_plugin.dll">
+      <Link>plugins\video_filter\liberase_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libextract_plugin.dll">
+      <Link>plugins\video_filter\libextract_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libfps_plugin.dll">
+      <Link>plugins\video_filter\libfps_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libfreeze_plugin.dll">
+      <Link>plugins\video_filter\libfreeze_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libgaussianblur_plugin.dll">
+      <Link>plugins\video_filter\libgaussianblur_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libgradfun_plugin.dll">
+      <Link>plugins\video_filter\libgradfun_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libgradient_plugin.dll">
+      <Link>plugins\video_filter\libgradient_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libgrain_plugin.dll">
+      <Link>plugins\video_filter\libgrain_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libhqdn3d_plugin.dll">
+      <Link>plugins\video_filter\libhqdn3d_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libinvert_plugin.dll">
+      <Link>plugins\video_filter\libinvert_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libmagnify_plugin.dll">
+      <Link>plugins\video_filter\libmagnify_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libmirror_plugin.dll">
+      <Link>plugins\video_filter\libmirror_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libmotionblur_plugin.dll">
+      <Link>plugins\video_filter\libmotionblur_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libmotiondetect_plugin.dll">
+      <Link>plugins\video_filter\libmotiondetect_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\liboldmovie_plugin.dll">
+      <Link>plugins\video_filter\liboldmovie_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libposterize_plugin.dll">
+      <Link>plugins\video_filter\libposterize_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libpostproc_plugin.dll">
+      <Link>plugins\video_filter\libpostproc_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libpsychedelic_plugin.dll">
+      <Link>plugins\video_filter\libpsychedelic_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libpuzzle_plugin.dll">
+      <Link>plugins\video_filter\libpuzzle_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libripple_plugin.dll">
+      <Link>plugins\video_filter\libripple_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\librotate_plugin.dll">
+      <Link>plugins\video_filter\librotate_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libscale_plugin.dll">
+      <Link>plugins\video_filter\libscale_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libscene_plugin.dll">
+      <Link>plugins\video_filter\libscene_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libsepia_plugin.dll">
+      <Link>plugins\video_filter\libsepia_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libsharpen_plugin.dll">
+      <Link>plugins\video_filter\libsharpen_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libtransform_plugin.dll">
+      <Link>plugins\video_filter\libtransform_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libvhs_plugin.dll">
+      <Link>plugins\video_filter\libvhs_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_filter\libwave_plugin.dll">
+      <Link>plugins\video_filter\libwave_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_output\libdirect3d11_plugin.dll">
+      <Link>plugins\video_output\libdirect3d11_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_output\libdrawable_plugin.dll">
+      <Link>plugins\video_output\libdrawable_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_output\libflaschen_plugin.dll">
+      <Link>plugins\video_output\libflaschen_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_output\libvdummy_plugin.dll">
+      <Link>plugins\video_output\libvdummy_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_output\libvmem_plugin.dll">
+      <Link>plugins\video_output\libvmem_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_output\libyuv_plugin.dll">
+      <Link>plugins\video_output\libyuv_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_splitter\libclone_plugin.dll">
+      <Link>plugins\video_splitter\libclone_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\video_splitter\libwall_plugin.dll">
+      <Link>plugins\video_splitter\libwall_plugin.dll</Link>
+    </Content>
+    <Content Include="..\..\libvlc\Universal\vlc-$(TargetedSDKArchitecture)\plugins\visualization\libvisual_plugin.dll">
+      <Link>plugins\visualization\libvisual_plugin.dll</Link>
+    </Content>
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="VLCCommands.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs.120, Version=14.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Universal</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.17.0">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsDesktop, Version=10.0.15063.0">
+      <Name>Windows Desktop Extensions for the UWP</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsMobile, Version=10.0.15063.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\VRPlayer\VRPlayer.csproj">
+      <Project>{5db2c494-91f6-4cc1-b247-875b994f7421}</Project>
+      <Name>VRPlayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\libVLCX.UWP\libVLCX.UWP.vcxproj">
+      <Project>{dc8bbfae-5203-44be-9a7c-b3273038d676}</Project>
+      <Name>libVLCX.UWP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Converters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Definitions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Factory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Flyouts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Templates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Templates\AlbumTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Templates\ArtistTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Templates\TrackCollectionTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Templates\TrackTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Templates\VideoTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainPageFileExplorer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainPageMusic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainPageNetwork.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainPageVideos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainPageXBOX.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainVideoControls\AllVideosPivotItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainVideoControls\CameraRollPivotItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MainVideoControls\ShowsPivotItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MusicPanes\AlbumCollectionBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MusicPanes\ArtistCollectionBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MusicPanes\MusicPanesControls\AlbumsCollectionButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MusicPanes\PlaylistCollectionBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPages\MusicPanes\SongCollectionBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\AlbumPageControls\AlbumPageBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\AlbumPageControls\MainAlbumHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\ArtistPageControls\ArtistAlbumsSemanticView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\ArtistPageControls\ArtistInfoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\ArtistPageControls\MainArtistHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\CreateNewPlaylist.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\MiniPlayerWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\MusicPlayerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\MusicPlaylistPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\PlaylistControls\AddAlbumToPlaylistBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\PlaylistPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MusicPages\TagEditorPages\TrackEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingsPages\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AlbumControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\AlbumWithTracksResponsiveTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\ArtistHorizontalTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\BufferingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\CommandBarBottom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Flyouts\AlbumMenuFlyout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Flyouts\FileExplorerItemFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\Flyouts\TrackItemFlyout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Flyouts\VideoInformationFlyout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\FocusTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\FolderDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\MusicControls\Equalizer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\PlayPauseButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\PivotHeaderControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\FakeAlbumControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\FakeVideoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoCameraVideos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoFavoriteAlbumsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoMusicShowsPlaceholder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoPlaylistPlaceholder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoResults.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoShowPlaceholder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NothingToSeeHere.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoVideosControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\NoVideosPlaceholder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Placeholders\StartSearchingSomething.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Shell\BlankPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Shell\HomePageController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Shell\DesktopHomePageController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\Shell\VLCDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\ShowItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\SliderControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\SliderControlHorizontal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\TrackItemTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\TrackItemTemplateDetailed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\TrackItemTemplateDetailedVertical.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\VideoItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\VLCLogoWithGradient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VariousPages\AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VariousPages\ExternalStorageIncludePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VariousPages\SearchPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VideoPages\TVShowsViews\ShowEpisodesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VideoPages\VideoNowPlayingControls\AudioTracksSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VideoPages\VideoNowPlayingControls\ChaptersSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VideoPages\VideoNowPlayingControls\SubtitlesSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VideoPages\VideoNowPlayingControls\VideoPlayerOptionsPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\VideoPages\VideoPlayerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\ja-JP\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="$(MSBuildThisFileDirectory)MultilingualResources\VLC.Universal.fr-FR.xlf" />
+    <XliffResource Include="$(MSBuildThisFileDirectory)MultilingualResources\VLC.Universal.ja-JP.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\MainPages\MainVideoControls\VideoPanesControls\" />
+  </ItemGroup>
+  <Import Project="..\VLC.Core\VLC_WinRT.Shared.projitems" Label="Shared" />
+  <Import Project="..\VLC.MediaMetaFetcher\VLC_WinRT.MusicMetaFetcher.projitems" Label="Shared" />
+  <Import Project="..\VLC.Slideshow\VLC_WinRT.Slideshow.projitems" Label="Shared" />
+  <Import Project="..\VLC.SplitShell\VLC_WinRT.SplitShell.projitems" Label="Shared" />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
