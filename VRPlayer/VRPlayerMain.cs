@@ -236,6 +236,11 @@ namespace VRPlayer
             return holographicFrame;
         }
 
+        internal void Stop()
+        {
+            videoRenderer.Stop();
+        }
+
         internal void ReloadVideoFile()
         {
             videoRenderer.ReloadVideoFile();

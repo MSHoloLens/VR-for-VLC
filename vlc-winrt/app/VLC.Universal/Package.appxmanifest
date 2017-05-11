@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap mp uap3">
-  <Identity Name="906.VRforVLC" Publisher="CN=082E31C3-1BA9-489A-BBF5-2E1B00D0BCB1" Version="1.1.14.0" />
+  <Identity Name="906.VRforVLC" Publisher="CN=082E31C3-1BA9-489A-BBF5-2E1B00D0BCB1" Version="1.1.16.0" />
   <mp:PhoneIdentity PhoneProductId="25395555-a765-4d57-b8c3-50f1e9f33b86" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>VR for VLC</DisplayName>

@@ -215,6 +215,10 @@ namespace VRPlayer
             {
                 main.ReloadVideoFile();
             }
+            else
+            {
+                main.Stop();
+            }
         }
 
         private void OnWindowClosed(CoreWindow sender, CoreWindowEventArgs arg)

@@ -240,15 +240,15 @@ namespace VRPlayer.Content
             // cube at a comfortable size we made the cube width 0.2 m (20 cm).
             TexturedVertex[] cubeVertices =
             {
-                new TexturedVertex(new Vector3(-0.526f,  0.296f,  0), new Vector2(0, 0)),
-                new TexturedVertex(new Vector3( 0.526f,  0.296f,  -0.01f), new Vector2(0.5f, 0)),
-                new TexturedVertex(new Vector3( 0.526f, -0.296f,  -0.01f), new Vector2(0.5f, 1)),
-                new TexturedVertex(new Vector3(-0.526f, -0.296f,  0), new Vector2(0, 1)),
+                new TexturedVertex(new Vector3(-0.526f,  0.290f,  0), new Vector2(0, 0)),
+                new TexturedVertex(new Vector3( 0.526f,  0.290f,  -0.01f), new Vector2(0.5f, 0)),
+                new TexturedVertex(new Vector3( 0.526f, -0.312f,  -0.01f), new Vector2(0.5f, 1)),
+                new TexturedVertex(new Vector3(-0.526f, -0.312f,  0), new Vector2(0, 1)),
 
-                new TexturedVertex(new Vector3(0.527f,  0.296f,  -0.01f), new Vector2(0.5f, 0)),
-                new TexturedVertex(new Vector3(1.579f,  0.296f,  0), new Vector2(1, 0)),
-                new TexturedVertex(new Vector3(1.579f, -0.296f,  0), new Vector2(1, 1)),
-                new TexturedVertex(new Vector3(0.527f, -0.296f,  -0.01f), new Vector2(0.5f, 1)),
+                new TexturedVertex(new Vector3(0.527f,  0.290f,  -0.01f), new Vector2(0.5f, 0)),
+                new TexturedVertex(new Vector3(1.579f,  0.290f,  0), new Vector2(1, 0)),
+                new TexturedVertex(new Vector3(1.579f, -0.312f,  0), new Vector2(1, 1)),
+                new TexturedVertex(new Vector3(0.527f, -0.312f,  -0.01f), new Vector2(0.5f, 1)),
             };
 
             vertexBuffer = this.ToDispose(SharpDX.Direct3D11.Buffer.Create(

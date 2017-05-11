@@ -43,3 +43,4 @@ VR4VLC.VC.db
 project.lock.json
 /vlc-winrt/libvlc/Universal
 /.vs/VR4VLC/v15/Browse.VC.db
+/vlc-winrt/app/VLC.Universal/Package.StoreAssociation.xml
