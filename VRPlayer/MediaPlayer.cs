@@ -318,9 +318,9 @@ namespace VRPlayer
             if (mediaEngineEx != null)
             {
                 if (Duration - PlaybackPosition >= skipTime)
-                    PlaybackPosition = Duration;
+                    PlaybackPosition = mediaEngineEx.CurrentTime + skipTime; 
                 else
-                    PlaybackPosition = mediaEngineEx.CurrentTime + skipTime;
+                    PlaybackPosition = Duration;
             }
                 
 
