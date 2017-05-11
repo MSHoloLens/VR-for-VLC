@@ -23,6 +23,7 @@
 *.ncrunchsolution
 *.ncrunchproject
 *.pfx
+*.appx
 AppPackages/
 [Bb]in
 [Dd]ebug*/
@@ -44,3 +45,5 @@ project.lock.json
 /vlc-winrt/libvlc/Universal
 /.vs/VR4VLC/v15/Browse.VC.db
 /vlc-winrt/app/VLC.Universal/Package.StoreAssociation.xml
+BundleArtifacts/
+/vlc-winrt/app/VLC.Universal/_pkginfo.txt
