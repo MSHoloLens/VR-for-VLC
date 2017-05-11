@@ -2,15 +2,15 @@
 struct GeometryShaderInput
 {
     min16float4 pos     : SV_POSITION;
-    min16float3 color   : COLOR0;
-    uint        instId  : TEXCOORD0;
+    min16float3 texcoord : TEXCOORD0;
+    uint        instId  : TEXCOORD1;
 };
 
 // Per-vertex data passed to the rasterizer.
 struct GeometryShaderOutput
 {
     min16float4 pos     : SV_POSITION;
-    min16float3 color   : COLOR0;
+    min16float3 texcoord : TEXCOORD0;
     uint        rtvId   : SV_RenderTargetArrayIndex;
 };
 
@@ -24,7 +24,7 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
     for (int i = 0; i < 3; ++i)
     {
         output.pos = input[i].pos;
-        output.color = input[i].color;
+        output.texcoord = input[i].texcoord;
         output.rtvId = input[i].instId;
         outStream.Append(output);
     }

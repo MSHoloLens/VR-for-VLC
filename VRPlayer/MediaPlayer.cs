@@ -115,6 +115,8 @@ namespace VRPlayer
                 mediaEngineEx.SetSourceFromByteStream(byteStream, fileName);
             }
 
+            PlaybackPosition = StartPosition;
+
         }
 
         public virtual void OnRender()
@@ -211,8 +213,9 @@ namespace VRPlayer
                         });
 
                         textureView = new ShaderResourceView(d3dDevice, OutputVideoTexture);
+                        
                     }
-                    PlaybackPosition = StartPosition;
+
                     mediaEngineEx.Play();
                 }
 
@@ -373,6 +376,7 @@ namespace VRPlayer
         {
             isVideoStopped = true;
             IsPlaying = false;
+            mediaEngineEx.Source = null;
         }
 
         protected virtual void OnMediaEngineEvent(MediaEngineEvent mediaEvent, long param1, int param2)

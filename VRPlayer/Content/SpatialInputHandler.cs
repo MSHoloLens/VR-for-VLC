@@ -46,18 +46,13 @@ namespace VRPlayer.Common
         /// <param name="args"></param>
         private void OnHoldStarted(SpatialGestureRecognizer sender, SpatialHoldStartedEventArgs args)
         {
-            Debug.WriteLine("OnHoldStarted ");
             holdStartTime = DateTime.Now;
-            
         }
 
         private void OnHoldComleted(SpatialGestureRecognizer sender, SpatialHoldCompletedEventArgs args)
         {
             GestureStatus = SpatialGestureSettings.Hold;
             HoldTotalTime = DateTime.Now - holdStartTime;
-
-            Debug.WriteLine("OnHoldComleted,TotalSeconds:  " + HoldTotalTime.TotalSeconds);
-
         }
 
 
@@ -70,8 +65,6 @@ namespace VRPlayer.Common
 
         private void OnTap(SpatialGestureRecognizer sender, SpatialTappedEventArgs args)
         {
-            Debug.WriteLine("OnTap,TapCount: " + args.TapCount);
-
             GestureStatus = (args.TapCount == 2) ? 
                 SpatialGestureSettings.DoubleTap : SpatialGestureSettings.Tap;
         }

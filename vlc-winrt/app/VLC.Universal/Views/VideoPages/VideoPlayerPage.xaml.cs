@@ -200,7 +200,15 @@ namespace VLC.UI.Views.VideoPages
             // Toggle the visibility once the animation is complete.
             // Otherwise, on xbox, double tapping B will toggle the boolean, and the 2nd press will 
             // trigger the "Back" action
-            OnPlayerControlVisibilityChanged(false);
+            try
+            {
+                OnPlayerControlVisibilityChanged(false);
+            }
+            catch (Exception)
+            {
+                
+            }
+            
         }
 
         void ToggleControlPanelVisibility()
